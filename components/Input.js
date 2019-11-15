@@ -1,26 +1,25 @@
 import React from "react";
-import styled from "styled-components";
+import { StyleSheet, View, TextInput } from "react-native";
 
 const Input = () => {
   return (
-    <Container>
-      <InputField />
-    </Container>
+    <View style={styles.input}>
+      <TextInput />
+    </View>
   );
 };
 
-const Container = styled.View`
-  flex: 1;
-  align-items: center;
-`;
-
-const InputField = styled.TextInput`
-  background: #ffffff;
-  border: 2px solid #f2994a;
-  border-radius: 5px;
-  width: 90%;
-  height: 60px;
-  padding: 0 15px;
-`;
+const styles = StyleSheet.create({
+  input: {
+    flex: 1,
+    alignItems: "center",
+    backgroundColor: "#ffffff",
+    borderWidth: 2,
+    borderRadius: 5,
+    borderColor: "#F2994A",
+    width: "90%",
+    paddingLeft: 15
+  }
+});
 
 export default Input;
